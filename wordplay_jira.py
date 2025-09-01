@@ -20,6 +20,9 @@ def compare_word_lengths(words):
 def longest_word(words):
     return max(words, key=len)
 
+def palindromes(words):
+    return [w for w in words if w == w[::-1]]
+
 if __name__ == "__main__":
     with open("wordlist.txt") as f:
         wordlist = f.read().splitlines()
@@ -30,3 +33,4 @@ if __name__ == "__main__":
     print("d) Words with all vowels:", words_with_all_vowels(wordlist))
     print("e) Compare 10 vs 7:", compare_word_lengths(wordlist))
     print("f) Longest word:", longest_word(wordlist))
+    print("g) Palindromes:", palindromes(wordlist))
