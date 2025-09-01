@@ -23,6 +23,9 @@ def longest_word(words):
 def palindromes(words):
     return [w for w in words if w == w[::-1]]
 
+def two_letter_words(words):
+    return [w for w in words if len(w) == 2]
+
 if __name__ == "__main__":
     with open("wordlist.txt") as f:
         wordlist = f.read().splitlines()
@@ -34,3 +37,4 @@ if __name__ == "__main__":
     print("e) Compare 10 vs 7:", compare_word_lengths(wordlist))
     print("f) Longest word:", longest_word(wordlist))
     print("g) Palindromes:", palindromes(wordlist))
+    print("h) Two-letter words:", two_letter_words(wordlist))
